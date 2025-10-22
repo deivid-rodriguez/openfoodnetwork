@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -o pipefail
+
 #
 # Runs prettier and pipes its output to reviewdog so it annotates a pull request with the issues found
 #
