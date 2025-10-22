@@ -4,7 +4,7 @@
 # Runs prettier and pipes its output to reviewdog so it annotates a pull request with the issues found
 #
 
-yarn run prettier --check . 2>&1 | sed --regexp-extended 's/(\[warn\].*)$/\1 File is not properly formatted./' \
+"$(npm root)/.bin/prettier" --check . 2>&1 | sed --regexp-extended 's/(\[warn\].*)$/\1 File is not properly formatted./' \
   | reviewdog \
       -efm="%-G[warn] Code style issues found in the above file(s). Forgot to run Prettier%. File is not properly formatted." \
       -efm="[%tarn] %f %m" \
