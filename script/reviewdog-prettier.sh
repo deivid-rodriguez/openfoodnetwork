@@ -19,4 +19,5 @@
       -filter-mode="added" \
       -fail-level="error" \
       -level="error" \
+      -log-level "debug" \
       -tee
