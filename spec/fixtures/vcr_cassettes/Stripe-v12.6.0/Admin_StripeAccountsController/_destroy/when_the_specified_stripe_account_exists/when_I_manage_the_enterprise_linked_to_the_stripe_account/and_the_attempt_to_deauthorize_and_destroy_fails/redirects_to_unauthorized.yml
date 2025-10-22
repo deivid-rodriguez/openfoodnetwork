@@ -13,6 +13,8 @@ http_interactions:
       - "<HIDDEN-AUTHORIZATION-HEADER>"
       Content-Type:
       - application/x-www-form-urlencoded
+      X-Stripe-Client-Telemetry:
+      - '{"last_request_metrics":{"request_id":"req_I7zl83OXvSTwIt","request_duration_ms":2985}}'
       Stripe-Version:
       - '2024-06-20'
       X-Stripe-Client-User-Agent:
@@ -29,7 +31,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 14 Oct 2025 01:51:39 GMT
+      - Tue, 14 Oct 2025 01:51:50 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -52,13 +54,13 @@ http_interactions:
       Content-Security-Policy:
       - base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none';
         img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src
-        'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=39XlnFBPQ-Y4807QrFMTQDaTkts3ZI0uTIvASKe2e1TcXdiXeoy4Hxh6Ilm33lzsUM9neGMp9bs-JtIz
+        'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=OM_QID4mkoXt71hL-zi5xW8jqDnQHEWcI3SnK_RU-cLKpURQ0m1ehrNriyw2idgVDNdNJm6WQolrhYkm
       Idempotency-Key:
-      - 5d24261c-650d-4769-8dfa-aa4a1e747ee2
+      - 85b10555-06e3-4a1a-af29-e0575d92cf55
       Original-Request:
-      - req_vk9HpcHKTl1p74
+      - req_WE5vn2qMJvfFcF
       Request-Id:
-      - req_vk9HpcHKTl1p74
+      - req_WE5vn2qMJvfFcF
       Stripe-Should-Retry:
       - 'false'
       Stripe-Version:
@@ -77,7 +79,7 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "id": "acct_1SHxOn3epHrSruUM",
+          "id": "acct_1SHxOy44F5OCYUxo",
           "object": "account",
           "business_profile": {
             "annual_revenue": null,
@@ -133,7 +135,7 @@ http_interactions:
             "type": "application"
           },
           "country": "AU",
-          "created": 1760406698,
+          "created": 1760406709,
           "default_currency": "aud",
           "details_submitted": false,
           "email": "jumping.jack@example.com",
@@ -142,7 +144,7 @@ http_interactions:
             "data": [],
             "has_more": false,
             "total_count": 0,
-            "url": "/v1/accounts/acct_1SHxOn3epHrSruUM/external_accounts"
+            "url": "/v1/accounts/acct_1SHxOy44F5OCYUxo/external_accounts"
           },
           "future_requirements": {
             "alternatives": [],
@@ -243,10 +245,10 @@ http_interactions:
           },
           "type": "standard"
         }
-  recorded_at: Tue, 14 Oct 2025 01:51:39 GMT
+  recorded_at: Tue, 14 Oct 2025 01:51:50 GMT
 - request:
     method: delete
-    uri: https://api.stripe.com/v1/accounts/acct_1SHxOn3epHrSruUM
+    uri: https://api.stripe.com/v1/accounts/acct_1SHxOy44F5OCYUxo
     body:
       encoding: US-ASCII
       string: ''
@@ -258,7 +260,7 @@ http_interactions:
       Content-Type:
       - application/x-www-form-urlencoded
       X-Stripe-Client-Telemetry:
-      - '{"last_request_metrics":{"request_id":"req_vk9HpcHKTl1p74","request_duration_ms":2784}}'
+      - '{"last_request_metrics":{"request_id":"req_WE5vn2qMJvfFcF","request_duration_ms":2140}}'
       Stripe-Version:
       - '2024-06-20'
       X-Stripe-Client-User-Agent:
@@ -275,7 +277,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 14 Oct 2025 01:51:42 GMT
+      - Tue, 14 Oct 2025 01:51:53 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -300,9 +302,9 @@ http_interactions:
         img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src
         'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=OM_QID4mkoXt71hL-zi5xW8jqDnQHEWcI3SnK_RU-cLKpURQ0m1ehrNriyw2idgVDNdNJm6WQolrhYkm
       Request-Id:
-      - req_bszCgtpD9YvJv0
+      - req_T4EwlbNFZKLppc
       Stripe-Account:
-      - acct_1SHxOn3epHrSruUM
+      - acct_1SHxOy44F5OCYUxo
       Stripe-Version:
       - '2024-06-20'
       Vary:
@@ -319,9 +321,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "id": "acct_1SHxOn3epHrSruUM",
+          "id": "acct_1SHxOy44F5OCYUxo",
           "object": "account",
           "deleted": true
         }
-  recorded_at: Tue, 14 Oct 2025 01:51:42 GMT
+  recorded_at: Tue, 14 Oct 2025 01:51:53 GMT
 recorded_with: VCR 6.2.0
