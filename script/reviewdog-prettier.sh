@@ -14,5 +14,5 @@ prettier --check 2>&1 | sed --regexp-extended 's/(\[warn\].*)$/\1 File is not pr
       -name="prettier" \
       -reporter="github-pr-check" \
       -filter-mode="added" \
-      -fail-on-error="true" \
+      -fail-level="error" \
       -level="error"
