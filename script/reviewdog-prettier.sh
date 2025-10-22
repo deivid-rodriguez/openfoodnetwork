@@ -17,6 +17,6 @@
       -name="prettier" \
       -reporter="github-pr-check" \
       -filter-mode="added" \
-      -fail-level="error" \
+      -fail-on-error="true" \
       -level="error" \
       -tee
