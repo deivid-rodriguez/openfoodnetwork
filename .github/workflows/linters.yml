@@ -21,7 +21,7 @@ jobs:
 
       - uses: reviewdog/action-setup@v1
         with:
-          reviewdog_version: v0.21.0
+          reviewdog_version: v0.20.1
 
       - run: ./script/reviewdog-prettier.sh
         env:

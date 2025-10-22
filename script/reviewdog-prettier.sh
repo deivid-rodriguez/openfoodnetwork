@@ -14,8 +14,8 @@
       -efm="%-G%r" \
       -name="prettier" \
       -reporter="github-pr-check" \
-      -filter-mode="nofilter" \
-      -fail-level="error" \
+      -filter-mode="added" \
+      -fail-on-error="true" \
       -level="error" \
       -log-level "debug" \
       -tee
