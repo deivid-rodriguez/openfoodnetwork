@@ -18,4 +18,5 @@
       -reporter="github-pr-check" \
       -filter-mode="added" \
       -fail-level="error" \
-      -level="error"
+      -level="error" \
+      -tee
