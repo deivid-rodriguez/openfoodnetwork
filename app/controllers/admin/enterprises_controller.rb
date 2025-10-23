@@ -163,8 +163,11 @@ module Admin
     def destroy
       @index = params[:index]
 
-      @object.destroy
-      flash.now[:success] = Spree.t(:successfully_removed, resource: "Enterprise")
+      if @object.destroy
+        flash.now[:success] = Spree.t(:successfully_removed, resource: "Enterprise")
+      else
+        flash.now[:error] = @object.errors.full_messages.to_sentence
+      end
 
       respond_to do |format|
         format.turbo_stream { render :destroy, status: :ok }
