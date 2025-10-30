@@ -34,3 +34,15 @@ bundle exec rubocop \
       -level="error" \
       -fail-level="any" \
       -tee
+
+echo "::group:: Running haml-lint with reviewdog 🐶 ..."
+
+bundle exec haml-lint \
+  --fail-level warn \
+  | reviewdog -f="haml-lint" \
+      -name="haml-lint" \
+      -reporter="github-pr-check" \
+      -filter-mode="nofilter" \
+      -level="error" \
+      -fail-level="any" \
+      -tee
