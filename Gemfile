@@ -199,6 +199,7 @@ group :development do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'rubocop-rspec_rails'
+  gem 'scss_lint', require: false
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-commands-rubocop'

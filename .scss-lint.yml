@@ -1,19 +1,27 @@
-scss_files: 'app/assets/stylesheets/**/*.css.scss'
-
-exclude: 'app/assets/stylesheets/shared/**'
+scss_files: 'app/assets/stylesheets/**/*.scss'
 
 linters:
+  ColorVariable:
+    enabled: false
+  Comment:
+    enabled: false
   ImportantRule:
     enabled: false
-    VendorPrefix:
-      enabled: false
-    LeadingZero:
-      enabled: false
-    PropertySortOrder:
-      enabled: false
-    StringQuotes:
-      enabled: false
-    DeclarationOrder:
-      enabled: false
-    NestingDepth:
-      enabled: false
+  VendorPrefix:
+    enabled: false
+  LeadingZero:
+    enabled: false
+  MergeableSelector:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
+  QualifyingElement:
+    enabled: false
+  SelectorDepth:
+    enabled: false
+  StringQuotes:
+    enabled: false
+  DeclarationOrder:
+    enabled: false
+  NestingDepth:
+    enabled: false

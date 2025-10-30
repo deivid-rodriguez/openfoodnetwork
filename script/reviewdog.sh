@@ -46,3 +46,16 @@ bundle exec haml-lint \
       -level="error" \
       -fail-level="any" \
       -tee
+
+echo "::group:: Running scss-lint with reviewdog 🐶 ..."
+
+bundle exec scss-lint \
+  | reviewdog \
+      -efm="%f:%l [%t] %m" \
+      -efm="%-G%.%#" \
+      -name="scss-lint" \
+      -reporter="github-pr-check" \
+      -filter-mode="nofilter" \
+      -level="error" \
+      -fail-level="any" \
+      -tee

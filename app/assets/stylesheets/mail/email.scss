@@ -54,7 +54,7 @@ table.social {
   background-color: #ebebeb;
 
   &.white-bg {
-    background-color: white !important;
+    background-color: #fff !important;
     border: 1px solid #ebebeb;
   }
 
@@ -65,7 +65,7 @@ table.social {
 
 table.order-summary {
   border-collapse: separate;
-  border-spacing: 0px 10px;
+  border-spacing: 0 10px;
 
   tbody tr td {
     padding-left: 5px;
@@ -74,7 +74,7 @@ table.order-summary {
 
   thead tr th {
     background-color: #f2f2f2;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000;
     padding-left: 5px;
     padding-right: 5px;
 
@@ -85,7 +85,7 @@ table.order-summary {
 
   tfoot {
     tr:first-child td {
-      border-top: 1px solid black;
+      border-top: 1px solid #000;
       padding-top: 5px;
     }
 
@@ -115,7 +115,7 @@ table.order-summary {
   font-size: 12px;
   margin-bottom: 10px;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   display: block;
   text-align: center;
@@ -123,7 +123,7 @@ table.order-summary {
 
 a {
   &.fb {
-    background-color: #3B5998 !important;
+    background-color: #3b5998 !important;
   }
 
   &.tw {
@@ -131,7 +131,7 @@ a {
   }
 
   &.gp {
-    background-color: #DB4A39 !important;
+    background-color: #db4a39 !important;
   }
 
   &.li {
@@ -157,7 +157,7 @@ img.float-right {
   display: block;
 }
 
-del.quantity_was {
+del.quantity-was {
   color: #757575;
 }
 
@@ -204,14 +204,24 @@ table {
  *		TYPOGRAPHY
  *------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.1;
   margin-bottom: 15px;
   color: #000;
 }
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
   font-size: 60%;
   color: #6f6f6f;
   line-height: 0;
@@ -250,7 +260,8 @@ h6 {
   color: #999;
 }
 
-p, ul {
+p,
+ul {
   margin-bottom: 10px;
   font-weight: normal;
   font-size: 14px;
@@ -263,7 +274,7 @@ p {
   }
 
   &.last {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -287,23 +298,27 @@ ul {
         color: #666;
         padding: 10px 16px;
 
-        /* 	font-weight:bold; */
         margin-right: 10px;
 
-        /* 	text-align:center; */
         cursor: pointer;
-        border-bottom: 1px solid #777777;
-        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #777;
+        border-top: 1px solid #fff;
         display: block;
         margin: 0;
 
         &.last {
-          border-bottom-width: 0px;
+          border-bottom-width: 0;
         }
+      }
 
-        h1, h2, h3, h4, h5, h6, p {
-          margin-bottom: 0 !important;
-        }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin-bottom: 0 !important;
       }
     }
   }
@@ -407,7 +422,7 @@ ul {
 
 .inline-header {
   display: inline-block;
-  margin: 0px;
+  margin: 0;
 }
 
 /*
@@ -415,6 +430,6 @@ ul {
  * Problem description: https://github.com/openfoodfoundation/openfoodnetwork/issues/1738
  * Solution: https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1770#issuecomment-73530576
  */
-thead { display: table-header-group }
-tfoot { display: table-row-group }
-tr { page-break-inside: avoid }
+thead { display: table-header-group; }
+tfoot { display: table-row-group; }
+tr { page-break-inside: avoid; }
