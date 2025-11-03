@@ -8,10 +8,6 @@
 
 linters:
 
-  # Offense count: 35
-  ClassAttributeWithStaticValue:
-    enabled: false
-
   # Offense count: 77
   ClassesBeforeIds:
     enabled: false
