@@ -4,7 +4,7 @@
 # Runs linters and pipes their output to reviewdog so it annotates a pull request with the issues found
 #
 
-set -eo pipefail
+set -o pipefail
 
 echo "::group:: Running prettier with reviewdog 🐶 ..."
 
@@ -23,6 +23,8 @@ echo "::group:: Running prettier with reviewdog 🐶 ..."
       -level="error" \
       -tee
 
+prettier=$?
+
 echo "::group:: Running rubocop with reviewdog 🐶 ..."
 
 bundle exec rubocop \
@@ -34,6 +36,8 @@ bundle exec rubocop \
       -level="error" \
       -fail-level="any" \
       -tee
+
+rubocop=$?
 
 echo "::group:: Running haml-lint with reviewdog 🐶 ..."
 
@@ -47,6 +51,8 @@ bundle exec haml-lint \
       -fail-level="any" \
       -tee
 
+haml_lint=$?
+
 echo "::group:: Running scss-lint with reviewdog 🐶 ..."
 
 bundle exec scss-lint \
@@ -59,3 +65,7 @@ bundle exec scss-lint \
       -level="error" \
       -fail-level="any" \
       -tee
+
+scss_lint=$?
+
+! (( prettier || rubocop || haml_lint || scss_lint ))
