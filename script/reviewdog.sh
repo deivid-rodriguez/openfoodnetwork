@@ -8,10 +8,10 @@ set -o pipefail
 
 echo "::group:: Running prettier with reviewdog 🐶 ..."
 
-"$(npm root)/.bin/prettier" --check . 2>&1 | sed --regexp-extended 's/(\[warn\].*)$/\1 File is not properly formatted./' \
+"$(npm root)/.bin/prettier" --check . 2>&1 | sed --regexp-extended 's/(\[warn\].*)$/\1:1 File is not properly formatted./' \
   | reviewdog \
       -efm="%-G[warn] Code style issues found in %s. Run Prettier to fix. File is not properly formatted." \
-      -efm="[%tarn] %f %m" \
+      -efm="[%tarn] %f:%l %m" \
       -efm="%E[%trror] %f: %m (%l:%c)" \
       -efm="%C[error]%r" \
       -efm="%Z[error]%r" \
