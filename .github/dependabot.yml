@@ -46,4 +46,4 @@ updates:
     groups:
       webpack:
         patterns:
-          - "webpack*"
+          - "*webpack*"
